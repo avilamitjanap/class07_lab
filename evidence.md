@@ -24,11 +24,18 @@ Ran 5 tests in 0.001s
 OK
 
 ## Step 2 — Run only on pushes to main
-- Commit/run that installed the main-only trigger:
-- `trigger-check` branch commit SHA:
-- What the Actions page showed for that branch/SHA:
-- Run URL after the same commit was pushed to `main`:
+- Commit/run that installed the main-only trigger: 26cc17c Run CI only on main pushes
+26cc17c3690c23ee97447a9179ed567de5d8a525
+
+https://github.com/avilamitjanap/class07_lab/actions/runs/35759083223
+
+- `trigger-check` branch commit SHA:a7bb10c472fb8f6b5103aa2a3c4593fd09cffdfd
+
+- What the Actions page showed for that branch/SHA: Filtering actions by trigger-check branch showed no workflow runs. commit a7bb10c was on github but no run was crated for it 
+- Run URL after the same commit was pushed to `main`: https://github.com/avilamitjanap/class07_lab/actions/runs/35759701618
 - Explain why a local commit alone does not start GitHub Actions:
+
+git commit only writes into the .git folder on mymachine, therefore github doesn't actually know that a commit exists. The push is the event that allows github to receive it, the branch ref moves and github then reads the on rules in ci.yml against that event. If the event matches, in this case the push, then github creates the run.
 
 ## Step 3 — Publish and retrieve the Python image
 - Package page URL (GHCR, linked to this repository):
