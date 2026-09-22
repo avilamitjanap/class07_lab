@@ -3,10 +3,25 @@
 Use actual output. Replace each blank; do not copy the acceptance text as a result.
 
 ## Step 1 — Create the repository and pipeline
-- Repository URL:
-- Workflow path:
-- First passing run URL and source commit:
-- Actual unit-test result:
+- Repository URL: https://github.com/avilamitjanap/class07_lab
+- Workflow path: https://github.com/avilamitjanap/class07_lab/tree/main/.github/workflows/ci.yml
+- First passing run URL and source commit: https://github.com/avilamitjanap/class07_lab/actions/runs/35757128693    
+
+5e5cc19
+
+- Actual unit-test result: https://github.com/avilamitjanap/class07_lab/actions/runs/35757128693/job/106845600326
+
+Run python3 -m unittest -v
+test_above_boundary (test_app.ClassifyTests.test_above_boundary) ... ok
+test_below_boundary (test_app.ClassifyTests.test_below_boundary) ... ok
+test_endpoints (test_app.ClassifyTests.test_endpoints) ... ok
+test_exact_boundary (test_app.ClassifyTests.test_exact_boundary) ... ok
+test_invalid_values (test_app.ClassifyTests.test_invalid_values) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
 
 ## Step 2 — Run only on pushes to main
 - Commit/run that installed the main-only trigger:
